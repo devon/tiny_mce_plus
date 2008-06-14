@@ -20,7 +20,7 @@ responds_to_parent （http://responds-to-parent.googlecode.com/svn/trunk）
 will_paginate （git://github.com/mislav/will_paginate.git）
 
 Or(because some version doesn't work properly, so, i packaged the plugins)
-rake rake tiny_mce_plus:plugins
+rake tiny_mce_plus:plugins
 
 Also, you need 'login_required' method and 'current_user' object in your application. (I recommend you use restful_authentication).
 
