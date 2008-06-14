@@ -5,6 +5,9 @@ This plugin based on community engine and tiny_mce plugin, thanks for their grea
 
 1, Install tiny_mce_plus
 
+cd vendor/plugins
+git clone git@github.com:devon/tiny_mce_plus.git
+
 script/generate tiny_mce_plus_migration
 rake db:migration
 
