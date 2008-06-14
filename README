@@ -1,0 +1,41 @@
+TinyMcePlus
+===========
+
+This plugin based on community engine and tiny_mce plugin, thanks for their great job.
+
+1, Install tiny_mce_plus
+
+script/generate tiny_mce_plus_migration
+rake db:migration
+
+rake tiny_mce_plus:install
+
+2, Install dependent plugins(if you didn't):
+
+attachment_fu （git://github.com/technoweenie/attachment_fu.git）
+responds_to_parent （http://responds-to-parent.googlecode.com/svn/trunk）
+will_paginate （git://github.com/mislav/will_paginate.git）
+
+Or(because some version doesn't work properly, so, i packaged the plugins)
+rake tiny_mce_plus:install
+
+Also, you need 'login_required' method and 'current_user' object in your application. (I recommend you use restful_authentication).
+
+3, In your layout:
+
+<%= javascript_include_tiny_mce_if_used %> 
+<%= tiny_mce if using_tiny_mce? %>
+<%= javascript_include_tag :defaults %>
+
+4, In your controller:
+
+uses_tiny_mce(:options => AppConfig.default_mce_options, :only => [:new, :edit])
+
+
+Example
+=======
+
+Example goes here.
+
+
+Copyright (c) 2008 [name of plugin creator], released under the MIT license
