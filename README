@@ -35,10 +35,31 @@ Also, you need 'login_required' method and 'current_user' object in your applica
 uses_tiny_mce(:options => AppConfig.default_mce_options, :only => [:new, :edit])
 
 
-Example
-=======
+Install file lists
+==================
 
-Example goes here.
+rake tiny_mce_plus:install will Install following files:
 
+app
+  |-- controller
+    |-- tiny_mce_photos_controller.rb
+  |-- helpers
+    |-- remote_link_renderer.rb
+  |-- models
+    |-- tiny_mce_photo.rb
+  |-- views
+    |-- tiny_mce_photos
+       |-- _photo_list.html.erb
+config
+  |-- initializers
+    |-- tiny_mce_plus_config.rb
 
-Copyright (c) 2008 [name of plugin creator], released under the MIT license
+public
+  |-- images
+    |-- tiny_mce
+  |-- javascripts
+    |-- tiny_mce
+
+You may custom the editor in tiny_mce_plus_config.rb.
+
+Copyright (c) 2008 devon at kuxuesoft.com, released under the MIT license
