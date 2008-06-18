@@ -9,7 +9,7 @@ cd vendor/plugins
 git clone git@github.com:devon/tiny_mce_plus.git
 
 script/generate tiny_mce_plus_migration
-rake db:migration
+rake db:migrate
 
 rake tiny_mce_plus:install
 
@@ -60,6 +60,10 @@ public
   |-- javascripts
     |-- tiny_mce
 
-You may custom the editor in tiny_mce_plus_config.rb.
+You may custom the config in tiny_mce_plus_config.rb.
+
+Attention:
+1, do not put <p> </p> around the textarea.
+2, If you use old will_paginate plugin, maybe change the url_for to url_option in remote_link_renderer.rb
 
 Copyright (c) 2008 devon at kuxuesoft.com, released under the MIT license
